@@ -1,6 +1,6 @@
 # Apartment catalog using Django and Bootstrap
 
-![Screenshot](/doc/screenshot.jpg)
+![Screenshot](/doc/screenshot.png)
 
 To run the project:
 1) change secret_key in setting.py in building_catalogue
