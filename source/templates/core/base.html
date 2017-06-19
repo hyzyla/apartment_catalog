@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+
+    <script src="{% static "core/js/jquery-3.2.1.min.js" %}"></script>
+    <script src="{% static "core/js/bootstrap.min.js" %}"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous"/>
+    <link href="{% static "core/css/bootstrap.css" %}" rel="stylesheet"/>
+
+    <title> Каталог будівель </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body style="background-color:  #fcfcfc">
+  {% include "core/header.html"%}
+
+  {% block 'body' %}
+  {% endblock %}
+</body>
+</html>

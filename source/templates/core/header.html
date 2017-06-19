@@ -1,0 +1,49 @@
+<nav class="navbar navbar-default" style=" box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Каталог будівель</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <form class="navbar-form navbar-left" action="/search", method="GET" role="form">
+        <div class="form-group">
+          <input type="text" name="room_count"  class="form-control" 
+                 placeholder="Кількість кімнат" 
+                 {% if current_room_count %} 
+                    value="{{ current_room_count }}"
+                {% endif %}>
+          <input type="text" name="price" class="form-control" 
+                 placeholder="Максимальна ціна" 
+                 {% if current_price %} 
+                    value="{{ current_price }}"
+                 {% endif %}>
+          <input type="text" name="area_total" class="form-control" 
+                 placeholder="Мінімальна загальна площа"
+                 {% if current_room_count %} 
+                    value="{{ current_area_total }}"
+                 {% endif %}>
+          <input type="text" name="bood_comp" class="form-control" 
+                 placeholder="Забудовник"
+                 {% if current_bood_comp %} 
+                    value="{{ current_bood_comp }}"
+                 {% endif %}>
+          <input type="text" name="district" class="form-control" 
+                 placeholder="Район"
+                 {% if current_district %} 
+                    value="{{ current_district }}"
+                 {% endif %}>
+          <button type="submit" class="btn btn-default">Пошук</button>
+        </div>
+        
+      </form>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
